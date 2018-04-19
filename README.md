@@ -6,6 +6,7 @@ This is a Rust crate for the [Push More](https://pushmore.io) service to easily 
 [![Build Status](https://travis-ci.org/neosilky/pushmore-rust-client.svg?branch=master)](https://travis-ci.org/neosilky/pushmore-rust-client)
 [![Docs Status](https://docs.rs/pushmore/badge.svg)](https://docs.rs/pushmore)
 [![On crates.io](https://img.shields.io/crates/d/pushmore.svg)](https://crates.io/crates/pushmore)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 - [Documentation](https://docs.rs/pushmore)
 
