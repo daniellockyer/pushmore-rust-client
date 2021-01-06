@@ -13,4 +13,4 @@ keywords = ["telegram", "notifications"]
 travis-ci = { repository = "neosilky/pushmore-rust-client" }
 
 [dependencies]
-reqwest = "0.9"
+reqwest = "0.11"
