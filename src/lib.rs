@@ -1,5 +1,3 @@
-extern crate reqwest;
-
 use std::env;
 
 /// Base webhook URL for the Push More service.
@@ -7,7 +5,7 @@ static WEBHOOK_URL: &str = "https://pushmore.io/webhook/";
 
 #[derive(Default)]
 pub struct PushMore {
-    key: String
+    key: String,
 }
 
 impl PushMore {
@@ -43,9 +41,7 @@ impl PushMore {
     /// let client = PushMore::new_with_key("<pushmore key>".to_string());
     /// ```
     pub fn new_with_key(key: String) -> Self {
-        PushMore {
-            key
-        }
+        PushMore { key }
     }
 
     /// Send a String through the Push More service to Telegram.
@@ -59,10 +55,9 @@ impl PushMore {
     /// ```
     pub fn send(&self, body: String) -> bool {
         let url = format!("{}{}", WEBHOOK_URL, self.key);
-        let client = reqwest::Client::new();
 
-        if let Ok(mut r) = client.post(&url).body(body).send() {
-            if let Ok(b) = r.text() {
+        if let Ok(resp) = ureq::post(&url).send_string(&body) {
+            if let Ok(b) = resp.into_string() {
                 return b.contains("OK");
             }
         }

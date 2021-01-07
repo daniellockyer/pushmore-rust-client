@@ -2,6 +2,7 @@
 name = "pushmore"
 description = "Easily send notifications to Telegram"
 version = "0.1.1"
+edition = "2018"
 license = "MIT"
 readme = "README.md"
 authors = ["Daniel Lockyer <hi@daniellockyer.com>"]
@@ -13,4 +14,4 @@ keywords = ["telegram", "notifications"]
 travis-ci = { repository = "neosilky/pushmore-rust-client" }
 
 [dependencies]
-reqwest = "0.9"
+ureq = "2.0"
