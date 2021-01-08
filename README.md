@@ -38,5 +38,4 @@ client.send("hello!".to_string());
 
 ## TODO
 
-* Switch out `reqwest` for underlying `hyper` library to lighten the dependencies.
 * Add tests
